@@ -163,11 +163,12 @@ a:focus-visible, button:focus-visible{
   background: var(--bg-alt);
   border: 1px solid var(--line);
   border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--muted);
-  font-size: 0.9rem;
+  overflow: hidden;
+}
+.hero-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (min-width: 900px){
@@ -185,6 +186,12 @@ a:focus-visible, button:focus-visible{
   background: var(--bg-alt);
   border: 1px solid var(--line);
   border-radius: 10px;
+  overflow: hidden;
+}
+.about-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 .about-text p + p{ margin-top: 1rem; }
 .about-text p{ color: var(--muted); }
@@ -211,6 +218,7 @@ a:focus-visible, button:focus-visible{
   width: 64px; height: 64px;
   border-radius: 50%;
   background: var(--bg-alt);
+  overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -218,9 +226,26 @@ a:focus-visible, button:focus-visible{
   color: var(--muted);
   margin-bottom: 0.5rem;
 }
+.card-avatar img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .card h3{ font-size: 1.1rem; }
 .card .role{ color: var(--primary); font-size: 0.85rem; font-weight: 600; }
 .card p{ color: var(--muted); font-size: 0.92rem; }
+
+.service-image{
+  aspect-ratio: 16/10;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+.service-image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 @media (min-width: 640px){
   .card-grid{ grid-template-columns: repeat(2, 1fr); }
@@ -303,4 +328,3 @@ a:focus-visible, button:focus-visible{
 @media (min-width: 640px){
   .footer-grid{ grid-template-columns: repeat(4, 1fr); }
 }
-</style>
